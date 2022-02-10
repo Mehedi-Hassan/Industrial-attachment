@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="450dp"
         android:layout_height="400dp"
-        android:src="@drawable/circle2"
+        android:src="@drawable/circle3"
         android:layout_marginBottom="-150dp"
         android:layout_marginEnd="-250dp"
         />
