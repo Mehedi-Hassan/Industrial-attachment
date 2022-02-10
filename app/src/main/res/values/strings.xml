@@ -7,4 +7,5 @@
     <string name="labelEmail">Email</string>
 
     <string name="required">Can\'t be less than 8 Characters</string>
+    <string name="newaccount">Create New Account?</string>
 </resources>
