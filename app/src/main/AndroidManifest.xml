@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IA">
         <activity
+            android:name=".ColorList"
+            android:exported="true" />
+        <activity
             android:name=".ColorDetailsActivity"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
