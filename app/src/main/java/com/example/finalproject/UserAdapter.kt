@@ -24,7 +24,7 @@ class UserAdapter(val userList: List<User>) : RecyclerView.Adapter<UserAdapter.V
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentData = userList[position]
         val fullName = currentData.first_name + " " + currentData.last_name
-        holder.userName.text = currentData.first_name
+        holder.userName.text = fullName
         Picasso.get().load(currentData.avatar).into(holder.userDp)
     }
 
