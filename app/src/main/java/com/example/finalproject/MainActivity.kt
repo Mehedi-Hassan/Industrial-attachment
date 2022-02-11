@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -7,26 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.userList.model.User
 import com.example.finalproject.userList.network.NetworkCallback
 import com.example.finalproject.userList.network.NetworkClient
+import com.google.android.material.button.MaterialButton
 
-class MainActivity : AppCompatActivity(), NetworkCallback {
-    private lateinit var recyclerView: RecyclerView
-    private val networkClient = NetworkClient(this)
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.users_list_layout)
+        setContentView(R.layout.activity_main)
 
-        recyclerView = findViewById(R.id.rv)
-        networkClient.getUser()
-    }
-
-    fun showData(dataList: List<User>){
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        val adapter = UserAdapter(dataList)
-        recyclerView.adapter = adapter
-    }
-
-    override fun getList(userList: List<User>) {
-        showData(userList)
+        val btUserList: MaterialButton = findViewById(R.id.btUserList)
+        btUserList.setOnClickListener{
+            val intent = Intent(this, UserListActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -20,7 +20,7 @@ class UserListActivity: AppCompatActivity(), NetworkCallback {
         networkClient.getUser()
     }
 
-    fun showData(dataList: List<User>){
+    private fun showData(dataList: List<User>){
         recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = UserAdapter(dataList)
         recyclerView.adapter = adapter
