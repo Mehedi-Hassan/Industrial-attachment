@@ -1,33 +1,19 @@
 package com.example.ia
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import model.Color
-import model.ColorAdapter
-import network.NetworkCallbackColor
-import network.NetworkClientColor
+import android.widget.Button
 
-class MainActivity : AppCompatActivity(), NetworkCallbackColor {
-    private lateinit var rcView: RecyclerView
-    private val networkClient = NetworkClientColor(this)
 
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.colordetailsrecyclerview)
-        rcView = findViewById(R.id.rv)
-        networkClient.getColor()
+        setContentView(R.layout.homebutton)
+        val button: Button = findViewById(R.id.colordetails)
+        button.setOnClickListener {
+            val intent = Intent(this, ColorDetailsActivity::class.java)
+            startActivity(intent)
+        }
     }
-
-    fun showData(colorList: List<Color>) {
-        rcView.layoutManager = LinearLayoutManager(this)
-        val adapter = ColorAdapter(colorList)
-        rcView.adapter = adapter
-    }
-
-    override fun getColor(colorList: List<Color>) {
-        showData(colorList)
-    }
-
 }

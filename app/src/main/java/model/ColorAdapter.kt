@@ -32,7 +32,7 @@ class ColorAdapter(val colorList: List<Color>) : RecyclerView.Adapter<ColorAdapt
         holder.name.text = currentData.name
         holder.year.text = currentData.year.toString()
         holder.pantone_value.text = currentData.pantone_value
-        holder.color.setCardBackgroundColor(Color.parseColor("#ffff"))
+        //holder.color.setCardBackgroundColor()
     }
 
     override fun getItemCount(): Int {
