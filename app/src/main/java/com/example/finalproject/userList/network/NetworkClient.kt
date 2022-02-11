@@ -3,6 +3,7 @@ package com.example.finalproject.userList.network
 import android.util.Log
 import android.widget.Toast
 import com.example.finalproject.MainActivity
+import com.example.finalproject.userList.model.PaginatedData
 import com.example.finalproject.userList.model.User
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,18 +22,18 @@ class NetworkClient(val networkCallback: NetworkCallback) {
             .build()
 
         val apiInterface = retrofit.create(ApiInterface::class.java)
-        apiInterface.getUsers().enqueue(object : Callback<List<User>>{
-            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+        apiInterface.getUsers().enqueue(object : Callback<PaginatedData>{
+            override fun onResponse(call: Call<PaginatedData>, response: Response<PaginatedData>) {
                 if(response.isSuccessful){
                     val body = response.body()
                     if(body != null){
-                        userList = body
+                        userList = body.data
                         networkCallback.getList(userList)
                     }
                 }
             }
 
-            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+            override fun onFailure(call: Call<PaginatedData>, t: Throwable) {
                 // TODO("Not yet implemented")
             }
 
