@@ -1,19 +1,25 @@
-package com.example.finalproject
+package com.example.finalproject.userList
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalproject.R
 import com.example.finalproject.userList.model.User
 import com.google.android.material.textview.MaterialTextView
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 
-class UserAdapter(val userList: List<User>) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class UserAdapter(val userList: List<User>, val listener: OnItemClickListener) :
+    RecyclerView.Adapter<UserAdapter.ViewHolder>(){
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val userName: MaterialTextView = view.findViewById(R.id.userName)
         val userDp: CircleImageView = view.findViewById(R.id.userDp)
+    }
+
+    interface OnItemClickListener {
+        fun onItemClicked(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,9 +32,13 @@ class UserAdapter(val userList: List<User>) : RecyclerView.Adapter<UserAdapter.V
         val fullName = currentData.first_name + " " + currentData.last_name
         holder.userName.text = fullName
         Picasso.get().load(currentData.avatar).into(holder.userDp)
+
+        holder.itemView.setOnClickListener { listener.onItemClicked(position) }
     }
 
     override fun getItemCount(): Int {
         return userList.size
     }
+
+
 }
