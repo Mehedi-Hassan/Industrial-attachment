@@ -1,8 +1,7 @@
 package com.example.finalproject
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -33,7 +32,12 @@ class UserListActivity: AppCompatActivity(), NetworkCallback, UserAdapter.OnItem
         showData(userList)
     }
 
-    override fun onItemClicked(position: Int) {
-        Toast.makeText(this, "User "+ position + " clicked", Toast.LENGTH_SHORT).show()
+    override fun onItemClicked(user: User) {
+        val intent = Intent(this, SingleProfileActivity::class.java)
+        intent.putExtra("first_name", user.first_name)
+        intent.putExtra("last_name", user.last_name)
+        intent.putExtra("email", user.email)
+        intent.putExtra("avatar", user.avatar)
+        startActivity(intent)
     }
 }

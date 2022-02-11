@@ -19,7 +19,7 @@ class UserAdapter(val userList: List<User>, val listener: OnItemClickListener) :
     }
 
     interface OnItemClickListener {
-        fun onItemClicked(position: Int)
+        fun onItemClicked(user: User)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,7 +33,7 @@ class UserAdapter(val userList: List<User>, val listener: OnItemClickListener) :
         holder.userName.text = fullName
         Picasso.get().load(currentData.avatar).into(holder.userDp)
 
-        holder.itemView.setOnClickListener { listener.onItemClicked(position) }
+        holder.itemView.setOnClickListener { listener.onItemClicked(currentData) }
     }
 
     override fun getItemCount(): Int {
