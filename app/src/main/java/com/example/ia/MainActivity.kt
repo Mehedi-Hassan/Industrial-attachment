@@ -11,11 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homebutton)
-        val button: Button = findViewById(R.id.colordetails)
-        button.setOnClickListener {
-            val intent = Intent(this, ColorDetailsActivity::class.java)
-            startActivity(intent)
-        }
+
         val colorlist: CardView = findViewById(R.id.colorlist)
         colorlist.setOnClickListener {
             val intent = Intent(this, ColorList::class.java)

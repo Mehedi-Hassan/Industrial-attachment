@@ -1,16 +1,18 @@
 package com.example.ia
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import model.Color
+import model.ColorAdapter
 import model.ColorListAdapter
 import network.NetworkCallbackColor
 import network.NetworkClientColor
 
-class ColorList : AppCompatActivity() , NetworkCallbackColor {
+class ColorList : AppCompatActivity() , NetworkCallbackColor , ColorListAdapter.OnItemClickListener{
     private lateinit var rcView: RecyclerView
     private val networkClient = NetworkClientColor(this)
 
@@ -23,12 +25,20 @@ class ColorList : AppCompatActivity() , NetworkCallbackColor {
 
     fun showData(colorList: List<Color>) {
         rcView.layoutManager = LinearLayoutManager(this)
-        val adapter = ColorListAdapter(colorList)
+        val adapter = ColorListAdapter(colorList, this)
         rcView.adapter = adapter
     }
 
     override fun getColor(colorList: List<Color>) {
         showData(colorList)
+    }
+    override fun onItemClicked(color: Color) {
+        val intent = Intent(this, ColorDetailsActivity::class.java)
+        intent.putExtra("id", color.id)
+        intent.putExtra("name", color.name)
+        intent.putExtra("year", color.year)
+        intent.putExtra("phantone_value", color.pantone_value)
+        startActivity(intent)
     }
 
 }

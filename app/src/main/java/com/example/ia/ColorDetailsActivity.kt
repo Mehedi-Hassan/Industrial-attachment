@@ -1,33 +1,33 @@
 package com.example.ia
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import model.Color
-import model.ColorAdapter
-import network.NetworkCallbackColor
-import network.NetworkClientColor
 
-class ColorDetailsActivity : AppCompatActivity(), NetworkCallbackColor {
-    private lateinit var rcView: RecyclerView
-    private val networkClient = NetworkClientColor(this)
 
+class ColorDetailsActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.colordetailsrecyclerview)
-        rcView = findViewById(R.id.rv)
-        networkClient.getColor()
-    }
+        setContentView(R.layout.colordetails)
 
-    fun showData(colorList: List<Color>) {
-        rcView.layoutManager = LinearLayoutManager(this)
-        val adapter = ColorAdapter(colorList)
-        rcView.adapter = adapter
-    }
+        val id: TextView = findViewById(R.id.id)
+        val name: TextView = findViewById(R.id.name)
+        val year: TextView = findViewById(R.id.year)
 
-    override fun getColor(colorList: List<Color>) {
-        showData(colorList)
-    }
+        //val color: CardView = findViewById(R.id.color)
+        val pantone_value: TextView = findViewById(R.id.value)
 
+        val bundle: Bundle? = intent.extras
+        val id2 = bundle!!.getString("id")
+        val name2 = bundle!!.getString("name")
+        val year2 = bundle!!.getString("year")
+        //val color2 = bundle!!.getString("color")
+        val pantone_value2 = bundle!!.getString("pantone_value")
+
+        id.text = id2
+        name.text = name2
+        year.text = year2
+        //color.setCardBackgroundColor()
+        pantone_value.text = pantone_value2
+    }
 }
