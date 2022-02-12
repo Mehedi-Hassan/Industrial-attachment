@@ -1,18 +1,17 @@
 package com.example.ia
 
+import ColorDetailsActivity
+import ColorListAdapter
+import NetworkCallbackColor
+import NetworkClientColor
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import model.Color
-import model.ColorAdapter
-import model.ColorListAdapter
-import network.NetworkCallbackColor
-import network.NetworkClientColor
+import com.example.ia.model.Color
 
-class ColorList : AppCompatActivity() , NetworkCallbackColor , ColorListAdapter.OnItemClickListener{
+class ColorList : AppCompatActivity() , NetworkCallbackColor, ColorListAdapter.OnItemClickListener{
     private lateinit var rcView: RecyclerView
     private val networkClient = NetworkClientColor(this)
 
