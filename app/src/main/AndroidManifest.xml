@@ -14,6 +14,7 @@
 
         <activity
             android:name=".ColorDetailsActivity"
+            android:parentActivityName=".ColorList"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -26,6 +27,7 @@
         </activity>
         <activity
             android:name=".ColorList"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
     </application>
 

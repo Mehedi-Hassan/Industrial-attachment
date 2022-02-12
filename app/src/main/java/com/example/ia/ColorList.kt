@@ -21,6 +21,11 @@ class ColorList : AppCompatActivity() , NetworkCallbackColor , ColorListAdapter.
         setContentView(R.layout.colorlistrecycleview)
         rcView = findViewById(R.id.rv)
         networkClient.getColor()
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     fun showData(colorList: List<Color>) {
@@ -34,10 +39,11 @@ class ColorList : AppCompatActivity() , NetworkCallbackColor , ColorListAdapter.
     }
     override fun onItemClicked(color: Color) {
         val intent = Intent(this, ColorDetailsActivity::class.java)
-        intent.putExtra("id", color.id)
+        intent.putExtra("id", color.id.toString())
         intent.putExtra("name", color.name)
-        intent.putExtra("year", color.year)
-        intent.putExtra("phantone_value", color.pantone_value)
+        intent.putExtra("year", color.year.toString())
+        intent.putExtra("pantone_value", color.pantone_value)
+        intent.putExtra("code", color.color)
         startActivity(intent)
     }
 

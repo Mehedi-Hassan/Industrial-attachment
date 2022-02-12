@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ia.R
+import com.google.android.material.card.MaterialCardView
 
 class ColorListAdapter(val colorList: List<Color>, val listener: OnItemClickListener) : RecyclerView.Adapter<ColorListAdapter.viewHolder>() {
     class viewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val name: TextView = view.findViewById(R.id.colorname)
 
-        val color: CardView = view.findViewById(R.id.white)
+        val color: MaterialCardView = view.findViewById(R.id.white)
     }
     interface OnItemClickListener {
         fun onItemClicked(color: Color)
@@ -29,7 +28,7 @@ class ColorListAdapter(val colorList: List<Color>, val listener: OnItemClickList
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
         val currentData = colorList[position]
         holder.name.text = currentData.name
-        //holder.color.setCardBackgroundColor(Color.parseColor("#ffffff"))
+        holder.color.setBackgroundColor(android.graphics.Color.parseColor(currentData.color))
         holder.itemView.setOnClickListener { listener.onItemClicked(currentData) }
     }
 
@@ -37,4 +36,5 @@ class ColorListAdapter(val colorList: List<Color>, val listener: OnItemClickList
         return colorList.size
     }
 }
+
 

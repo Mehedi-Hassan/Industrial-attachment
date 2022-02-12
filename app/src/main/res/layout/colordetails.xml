@@ -48,13 +48,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/color"
             android:layout_width="300dp"
             android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:elevation="5dp"
-            app:cardBackgroundColor="#7BC4C4"
             app:cardCornerRadius="20dp"
             app:layout_constraintLeft_toLeftOf="@id/white"
             app:layout_constraintRight_toRightOf="@id/white"
