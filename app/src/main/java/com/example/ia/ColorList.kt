@@ -1,6 +1,5 @@
 package com.example.ia
 
-import ColorDetailsActivity
 import ColorListAdapter
 import NetworkCallbackColor
 import NetworkClientColor
@@ -23,6 +22,7 @@ class ColorList : AppCompatActivity() , NetworkCallbackColor, ColorListAdapter.O
 
         val actionBar = supportActionBar
         if (actionBar != null) {
+            actionBar.title = "Color List"
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
     }

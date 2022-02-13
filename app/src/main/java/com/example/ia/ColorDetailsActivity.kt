@@ -1,9 +1,8 @@
-
+package com.example.ia
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ia.R
 import com.google.android.material.card.MaterialCardView
 
 
@@ -11,6 +10,11 @@ class ColorDetailsActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.colordetails)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = "Color Details"
+        }
 
         val id: TextView = findViewById(R.id.id)
         val name: TextView = findViewById(R.id.name)
