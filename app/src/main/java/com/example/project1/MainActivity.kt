@@ -11,12 +11,13 @@ import com.example.project1.network.NetworkClientRegister
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import android.widget.Toast.makeText
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_page)
+
 
         val button: Button = findViewById(R.id.button1)
         val emailid: EditText = findViewById(R.id.email)
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         val loginButton: Button = findViewById(R.id.button2)
         loginButton.setOnClickListener {
+
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
@@ -56,7 +58,11 @@ class MainActivity : AppCompatActivity() {
                         call: Call<RegisterData>,
                         response: Response<RegisterData>
                     ) {
-                        Toast.makeText(applicationContext, response.body()?.token, Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            response.body()?.token,
+                            Toast.LENGTH_LONG
+                        ).show()
 
                     }
 
@@ -65,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                 })
-            val intent2 = Intent(this,HomeActivity::class.java)
+            val intent2 = Intent(this, HomeActivity::class.java)
             startActivity(intent2)
         }
 
