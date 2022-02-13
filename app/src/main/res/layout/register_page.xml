@@ -1,67 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#58BFE6">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/circle1"
         android:layout_width="700dp"
         android:layout_height="700dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/circle1"
         android:layout_marginLeft="-290.71dp"
-        android:layout_marginTop="-403.2dp" />
+        android:layout_marginTop="-403.2dp"
+        android:src="@drawable/circle1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/circle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="450dp"
         android:layout_height="400dp"
-        android:src="@drawable/circle2"
-        android:layout_marginBottom="-150dp"
         android:layout_marginEnd="-250dp"
-        />
+        android:layout_marginBottom="-150dp"
+        android:src="@drawable/circle2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/registertextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingStart="30dp"
         android:text="Create Account"
-        android:textColor="#FFFFFF"
-        android:gravity="center_horizontal"
-        android:textSize="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#ffffff"
+        android:textSize="60dp"
         android:textStyle="bold"
-        android:letterSpacing="0.03" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="15"
-        android:id="@+id/name"
-        android:layout_marginStart="16dp"
-        android:padding="12dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="16dp"
-        android:hint="Name"
-        android:background="#FFFFFF"
-        android:layout_marginTop="260dp"
+        app:layout_constraintBottom_toTopOf="@id/registeremail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="15"
-        android:id="@+id/email"
+        android:id="@+id/registeremail"
         android:layout_marginStart="16dp"
         android:padding="12dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -72,13 +57,15 @@
         android:hint="Email"
         android:background="#ffffff"
         android:layout_marginTop="320dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateIds" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="15"
-        android:id="@+id/password"
+        android:id="@+id/registerpassword"
         android:padding="12dp"
         android:background="#ffffff"
         android:layout_marginEnd="16dp"
@@ -90,6 +77,7 @@
         android:hint="Password"
         android:layout_marginTop="380dp"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:text="REGISTER"
@@ -110,37 +98,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:text="Allready have an account?"
+        android:id="@+id/account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
+        android:text="Already have an account?"
+        android:textSize="20dp"
         android:textColor="#0000FF"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="540dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintRight_toLeftOf="@id/button2"/>
 
     <Button
-        android:text="LOGIN"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#00773F"
-        android:id="@+id/button2"
         android:layout_marginStart="16dp"
-        android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        android:textColor="#ffffff"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="580dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="#00773F"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="LOGIN"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toRightOf="@id/account"
+        app:layout_constraintTop_toBottomOf="@id/button1"
         tools:ignore="DuplicateIds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
