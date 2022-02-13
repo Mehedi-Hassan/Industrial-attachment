@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.myapplication.model.User
@@ -54,6 +55,11 @@ class LoginActivity : AppCompatActivity() {
 
                     }
                 })
+        }
+
+        val btRegister : Button = findViewById(R.id.btRegister)
+        btRegister.setOnClickListener{
+            //go to RegisterActivity
         }
     }
 }
