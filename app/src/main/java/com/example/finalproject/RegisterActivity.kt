@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.example.finalproject.network.NetworkClientRegister
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -16,7 +17,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
 
-        val button: Button = findViewById(R.id.button1)
+        val button: FloatingActionButton = findViewById(R.id.button1)
         val emailid: EditText = findViewById(R.id.edtTxtEmailReg)
         val passwordid: EditText = findViewById(R.id.edtTxtPasswordReg)
 
