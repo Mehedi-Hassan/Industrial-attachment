@@ -3,10 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.134" />
-        <entry key="app/src/main/res/drawable/ic_vector_cup.xml" value="0.2835" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/new_layout.xml" value="0.35625" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/circle1.xml" value="0.3675" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/circle2.xml" value="0.3675" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/circle3.xml" value="0.2385" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/circle_user_list.xml" value="0.1" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/single_profile_circle1.xml" value="0.1" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/drawable/single_profile_circle2.xml" value="0.1" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/activity_user.xml" value="0.31296296296296294" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/back_ground.xml" value="0.18802083333333333" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/login.xml" value="0.18802083333333333" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/single_profile.xml" value="0.33" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/single_user_layout.xml" value="0.1" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/users_list_layout.xml" value="0.11367380560131796" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/users_list_layout2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Attachment/Android/FinalProject/app/src/main/res/layout/users_page_layout.xml" value="0.22" />
       </map>
     </option>
   </component>
