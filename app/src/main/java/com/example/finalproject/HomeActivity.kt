@@ -13,23 +13,26 @@ class HomeActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
 
-        val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        val menuBar: FrameLayout = findViewById(R.id.menuBar)
+
+        val bottomNavigationView:  BottomNavigationView  = findViewById(R.id.bottom_navigation)
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.icon_color -> {
                     val intent = Intent(this, RegisterActivity::class.java)
                     startActivity(intent)
-                    return@OnNavigationItemSelectedListener true
+                    return@setOnItemSelectedListener true
                 }
                 R.id.icon_user -> {
                     val intent = Intent(this, RegisterActivity::class.java)
                     startActivity(intent)
-                    return@OnNavigationItemSelectedListener true
+                    return@setOnItemSelectedListener true
                 }
 
             }
             false
         }
-        val menuBar: FrameLayout = findViewById(R.id.menuBar)
 
         //menuBar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }

@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ia.R
+import com.example.finalproject.R
 import com.example.finalproject.model.Color
 
 import com.google.android.material.card.MaterialCardView

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ia.R
+import com.example.finalproject.R
 import com.example.finalproject.model.Color
 
 class ColorList : AppCompatActivity() , NetworkCallbackColor, ColorListAdapter.OnItemClickListener{
