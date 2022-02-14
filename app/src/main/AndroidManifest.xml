@@ -42,6 +42,16 @@
             android:name=".HomeActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".ColorList"
+            android:parentActivityName=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ColorDetailsActivity"
+            android:parentActivityName=".ColorList"
+            android:exported="true" />
+
     </application>
 
 </manifest>
