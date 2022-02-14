@@ -1,4 +1,4 @@
-package com.example.project1
+package com.example.finalproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.project1.model.RegisterData
-import com.example.project1.network.NetworkClientRegister
+import com.example.finalproject.model.RegisterData
+import com.example.finalproject.network.NetworkClientRegister
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

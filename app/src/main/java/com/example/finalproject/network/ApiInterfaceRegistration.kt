@@ -1,6 +1,6 @@
-package com.example.project1.network
+package com.example.finalproject.network
 
-import com.example.project1.model.RegisterData
+import com.example.finalproject.model.RegisterData
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
