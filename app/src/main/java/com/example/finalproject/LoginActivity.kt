@@ -1,15 +1,13 @@
-package com.example.myapplication
+package com.example.finalproject
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.myapplication.model.User
-import com.example.myapplication.network.NetworkClient
-import com.google.android.material.button.MaterialButton
+import com.example.finalproject.model.User
+import com.example.finalproject.network.NetworkClient
+import com.example.finalproject.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import retrofit2.Call
 import retrofit2.Callback

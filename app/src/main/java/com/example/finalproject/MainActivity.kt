@@ -1,8 +1,9 @@
-package com.example.myapplication
+package com.example.finalproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.finalproject.R
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
