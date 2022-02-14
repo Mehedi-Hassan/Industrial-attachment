@@ -9,8 +9,8 @@
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btUserList"
-        android:text="User List"
+        android:id="@+id/btLoginPage"
+        android:text="Login Page"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
