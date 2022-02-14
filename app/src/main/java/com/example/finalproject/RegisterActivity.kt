@@ -17,8 +17,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
         val button: Button = findViewById(R.id.button1)
-        val emailid: EditText = findViewById(R.id.registeremail)
-        val passwordid: EditText = findViewById(R.id.registerpassword)
+        val emailid: EditText = findViewById(R.id.edtTxtEmailReg)
+        val passwordid: EditText = findViewById(R.id.edtTxtPasswordReg)
 
         val loginButton: Button = findViewById(R.id.button2)
         loginButton.setOnClickListener {
