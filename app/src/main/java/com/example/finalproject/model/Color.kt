@@ -1,4 +1,4 @@
-package com.example.ia.model
+package com.example.finalproject.model
 
 data class Color(
     val id: Int,

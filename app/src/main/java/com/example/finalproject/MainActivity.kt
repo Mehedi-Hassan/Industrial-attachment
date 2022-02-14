@@ -1,10 +1,11 @@
-package com.example.ia
+package com.example.finalproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.cardview.widget.CardView
+import com.example.ia.R
 
 
 class MainActivity : AppCompatActivity() {

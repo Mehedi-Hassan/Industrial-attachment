@@ -1,6 +1,6 @@
 
-import com.example.ia.model.Color
-import com.example.ia.network.ApiInterfaceColor
+import com.example.finalproject.model.Color
+import com.example.finalproject.network.ApiInterfaceColor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

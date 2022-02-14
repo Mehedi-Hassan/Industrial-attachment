@@ -1,4 +1,4 @@
-package com.example.ia
+package com.example.finalproject
 
 import org.junit.Test
 

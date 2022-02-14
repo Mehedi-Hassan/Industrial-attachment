@@ -1,4 +1,4 @@
-package com.example.ia.model
+package com.example.finalproject.model
 
 
 import android.view.LayoutInflater
@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ia.R
+
 import android.content.res.ColorStateList
 import android.graphics.Color.parseColor
+import com.example.finalproject.R
 
 class ColorAdapter(val colorList: List<Color>) : RecyclerView.Adapter<ColorAdapter.viewHolder>() {
     class viewHolder(view: View) : RecyclerView.ViewHolder(view) {

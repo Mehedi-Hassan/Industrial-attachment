@@ -1,4 +1,4 @@
-package com.example.ia.network
+package com.example.finalproject.network
 
 import PaginationColor
 import retrofit2.http.GET
