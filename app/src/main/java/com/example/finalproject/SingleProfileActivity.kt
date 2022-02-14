@@ -5,12 +5,11 @@ import android.os.Bundle
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 import com.squareup.picasso.Picasso
-import de.hdodenhof.circleimageview.CircleImageView
 
 class SingleProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.single_profile)
+        setContentView(R.layout.activity_single_profile)
 
         val tvFirstName: MaterialTextView = findViewById(R.id.first_name)
         val tvLastName: MaterialTextView = findViewById(R.id.last_name)

@@ -8,8 +8,6 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-import android.content.res.ColorStateList
-import android.graphics.Color.parseColor
 import com.example.finalproject.R
 
 class ColorAdapter(val colorList: List<Color>) : RecyclerView.Adapter<ColorAdapter.viewHolder>() {
@@ -23,7 +21,7 @@ class ColorAdapter(val colorList: List<Color>) : RecyclerView.Adapter<ColorAdapt
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.colordetails, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.activity_color_details, parent, false)
         return viewHolder(view)
     }
     override fun onBindViewHolder(holder: viewHolder, position: Int) {

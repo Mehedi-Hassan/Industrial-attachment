@@ -13,12 +13,18 @@
         android:theme="@style/Theme.FinalProject">
 
         <activity
-            android:name=".SingleProfileActivity"
-            android:exported="false" />
+            android:name=".ColorDetailsActivity"
+            android:parentActivityName=".ColorListActivity"
+            android:exported="true" />
 
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+            android:name=".ColorListActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"
@@ -31,26 +37,24 @@
         </activity>
 
         <activity
-            android:name=".UserListActivity"
-            android:exported="true" />
-
-        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
 
         <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
+            android:name=".SingleProfileActivity"
+            android:exported="false" />
 
         <activity
-            android:name=".ColorList"
-            android:parentActivityName=".MainActivity"
+            android:name=".UserListActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".ColorDetailsActivity"
-            android:parentActivityName=".ColorList"
-            android:exported="true" />
+
+
+
+
+
+
+
 
     </application>
 

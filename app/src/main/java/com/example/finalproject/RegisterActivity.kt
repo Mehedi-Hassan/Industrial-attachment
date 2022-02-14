@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
-import com.example.finalproject.model.RegisterData
 import com.example.finalproject.network.NetworkClientRegister
 import retrofit2.Call
 import retrofit2.Callback
@@ -15,7 +13,7 @@ import retrofit2.Response
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register_page)
+        setContentView(R.layout.activity_register)
 
 
         val button: Button = findViewById(R.id.button1)
@@ -25,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
         val loginButton: Button = findViewById(R.id.button2)
         loginButton.setOnClickListener {
 
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -60,27 +58,24 @@ class RegisterActivity : AppCompatActivity() {
 
 
             NetworkClientRegister.instance.createUser(email, password)
-                .enqueue(object : Callback<RegisterData> {
+                .enqueue(object : Callback<Any> {
 
                     override fun onResponse(
-                        call: Call<RegisterData>,
-                        response: Response<RegisterData>
+                        call: Call<Any>,
+                        response: Response<Any>
                     ) {
-                        Toast.makeText(
-                            applicationContext,
-                            response.body()?.token,
-                            Toast.LENGTH_LONG
-                        ).show()
-
+                        if(response.isSuccessful){
+                            val intent = Intent(applicationContext, HomeActivity::class.java)
+                            startActivity(intent)
+                        }
                     }
 
-                    override fun onFailure(call: Call<RegisterData>, t: Throwable) {
-                        TODO("Not yet implemented")
+                    override fun onFailure(call: Call<Any>, t: Throwable) {
+
                     }
 
                 })
-            val intent2 = Intent(this, HomeActivity::class.java)
-            startActivity(intent2)
+
         }
 
     }

@@ -16,7 +16,7 @@ class UserListActivity: AppCompatActivity(), NetworkCallback, UserAdapter.OnItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.users_list_layout)
+        setContentView(R.layout.activity_users_list)
 
         recyclerView = findViewById(R.id.rv)
         networkClient.getUser()

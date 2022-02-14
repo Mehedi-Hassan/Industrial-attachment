@@ -8,16 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalproject.R
 import com.example.finalproject.model.Color
 
-class ColorList : AppCompatActivity() , NetworkCallbackColor, ColorListAdapter.OnItemClickListener{
+class ColorListActivity : AppCompatActivity() , NetworkCallbackColor, ColorListAdapter.OnItemClickListener{
     private lateinit var rcView: RecyclerView
     private val networkClient = NetworkClientColor(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.colorlistrecycleview)
+        setContentView(R.layout.activity_color_list)
         rcView = findViewById(R.id.rv)
         networkClient.getColor()
 

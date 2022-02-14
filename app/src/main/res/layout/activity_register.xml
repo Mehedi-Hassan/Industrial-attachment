@@ -55,7 +55,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
         android:hint="Email"
-        android:background="#ffffff"
+        android:background="#B2BEB5"
         android:layout_marginTop="320dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="DuplicateIds" />
@@ -67,7 +67,7 @@
         android:ems="15"
         android:id="@+id/registerpassword"
         android:padding="12dp"
-        android:background="#ffffff"
+        android:background="#B2BEB5"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"

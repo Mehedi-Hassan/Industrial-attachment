@@ -1,6 +1,5 @@
 package com.example.finalproject.network
 
-import com.example.finalproject.model.RegisterData
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -13,5 +12,5 @@ interface ApiInterfaceRegistration {
     fun createUser(
         @Field("email") email:String,
         @Field("password") password:String,
-    ): Call<RegisterData>
+    ): Call<Any>
 }

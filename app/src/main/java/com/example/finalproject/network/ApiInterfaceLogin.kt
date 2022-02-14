@@ -6,7 +6,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 
-interface ApiInterface {
+interface ApiInterfaceLogin {
     @FormUrlEncoded
     @POST("login")
     fun userLogin(

@@ -5,7 +5,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object NetworkClient {
+object NetworkClientLogin {
     private val AUTH = "Basic "+ Base64.encodeToString("belalkhan:123456".toByteArray(), Base64.NO_WRAP)
 
     private const val BASE_URL = "https://reqres.in/api/"
@@ -22,12 +22,12 @@ object NetworkClient {
             chain.proceed(request)
         }.build()
 
-    val instance: ApiInterface by lazy {
+    val instance: ApiInterfaceLogin by lazy {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofit.create(ApiInterface::class.java)
+        retrofit.create(ApiInterfaceLogin::class.java)
     }
 }
