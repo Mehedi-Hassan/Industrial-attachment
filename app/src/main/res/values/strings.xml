@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="labelFirstName">First Name</string>
+    <string name="labelLastName">Last Name</string>
+    <string name="labelPassword">Password</string>
+    <string name="labelConfirmPassword">Confirm Password</string>
+    <string name="labelEmail">Email</string>
+
+    <string name="required">Can\'t be less than 8 Characters</string>
+    <string name="newaccount">Create New Account?</string>
+    <string name="app_info">Here you can check out some cool information about several colors and people out there.</string>
+</resources>
