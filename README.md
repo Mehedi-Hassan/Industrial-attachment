@@ -28,7 +28,7 @@
  
 <table>
   <tr>
-    <td>User deyails</td>
+    <td>User details</td>
      <td>Color list fetched through API</td>
      <td>Color details</td>
   </tr>
