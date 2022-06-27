@@ -1,4 +1,4 @@
-- An android application with some features like login, register, user list, color list that fetches data through an REST-API (https://reqres.in/api).
+- An android application with some features like login, register, user list, color list that fetches data through a REST-API (https://reqres.in/api).
 - Used retrofit for GET and POST API calls.
 - Following are some screenshots from the app.
 
